@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .neumorphic {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 
+      10px 10px 20px #a3b1c6,
+      -10px -10px 20px #ffffff;
+  }
+  
+  .neumorphic-inset {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 
+      inset 10px 10px 20px #a3b1c6,
+      inset -10px -10px 20px #ffffff;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .romantic-gradient {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .hackathon-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .heart {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.6;
+  }
+  
+  .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+  .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+  .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+  .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+  .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+  .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
+  .heart:nth-child(8) { left: 80%; animation-delay: 7s; }
+  .heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+  }
+}
