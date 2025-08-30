@@ -81,28 +81,38 @@ const Hero = ({ setCurrentSection, onShowAuth }) => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
           >
-                         <motion.button
-               whileHover={{ scale: 1.05, y: -2 }}
-               whileTap={{ scale: 0.95 }}
-               onClick={onShowAuth}
-               className="group bg-gradient-to-r from-romantic-500 to-hackathon-500 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2"
-             >
-               <span>Join the Hackathon</span>
-               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-             </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onShowAuth}
+              className="group bg-gradient-to-r from-romantic-500 to-hackathon-500 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Join the Hackathon</span>
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/30 transition-all duration-300 flex items-center space-x-2"
+              onClick={onShowAuth}
+              className="group bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full font-medium border border-white/30 hover:bg-white/30 transition-all duration-300 flex items-center space-x-2"
             >
-              <Play size={20} className="group-hover:scale-110 transition-transform" />
-              <span>Watch Trailer</span>
+              <span>Direct Login</span>
+              <Heart size={18} className="group-hover:scale-110 transition-transform" />
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+            >
+              <Play size={18} className="group-hover:scale-110 transition-transform" />
+              <span>Watch Video</span>
             </motion.button>
           </motion.div>
         </motion.div>

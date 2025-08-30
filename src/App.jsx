@@ -10,7 +10,6 @@ import Prizes from './components/Prizes'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Auth from './components/Auth'
-import DemoAuth from './components/DemoAuth'
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home')
@@ -147,8 +146,7 @@ function App() {
 
             <Footer />
             
-            {/* Demo Auth Info */}
-            {!isAuthenticated && <DemoAuth />}
+            {/* Demo Auth Info - REMOVED */}
           </motion.div>
         )}
       </AnimatePresence>

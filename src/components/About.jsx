@@ -186,6 +186,30 @@ const About = () => {
             </motion.button>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
+            Join us for a unique experience where love meets innovation. Whether you're a coding couple, 
+            tech enthusiasts in love, or just passionate about creating something beautiful together, 
+            this hackathon is for you. Build amazing projects, make new friends, and celebrate the 
+            perfect blend of romance and technology.
+          </p>
+          
+          <motion.button
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('auth-section')?.scrollIntoView({ behavior: 'smooth' })}
+            className="mt-8 group bg-gradient-to-r from-romantic-500 to-hackathon-500 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 mx-auto"
+          >
+            <span>Get Started Now</span>
+            <Heart size={18} className="group-hover:scale-110 transition-transform" />
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   )
